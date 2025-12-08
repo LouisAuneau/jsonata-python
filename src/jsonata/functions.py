@@ -2107,7 +2107,7 @@ class Functions:
                 dt = datetime.datetime.fromisoformat(timestamp)
 
             if dt.tzinfo is None:
-                return dt.replace(tzinfo=datetime.timezone.utc)
+                dt = dt.replace(tzinfo=datetime.timezone.utc)
             
             return int(dt.timestamp() * 1000)
             # try:
