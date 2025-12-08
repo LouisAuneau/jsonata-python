@@ -2107,8 +2107,6 @@ class Functions:
                 dt = datetime.datetime.fromisoformat(timestamp)
             if dt.tzinfo is None:
                 dt = dt.replace(tzinfo=datetime.timezone.utc)
-            else:
-                dt = dt.astimezone(datetime.timezone.utc)
             return int(dt.timestamp() * 1000)
             # try:
             #     size = len(timestamp)
