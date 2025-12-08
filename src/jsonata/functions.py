@@ -2105,10 +2105,8 @@ class Functions:
                 dt = datetime.datetime.strptime(timestamp, "%Y")
             else:
                 dt = datetime.datetime.fromisoformat(timestamp)
-
             if dt.tzinfo is None:
                 dt = dt.replace(tzinfo=datetime.timezone.utc)
-            
             return int(dt.timestamp() * 1000)
             # try:
             #     size = len(timestamp)
